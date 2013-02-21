@@ -1,10 +1,10 @@
 ---
 applications:
-  target/deploy:
+  target/classes:
     url: springmvc-example.eu01.aws.af.cm
     name: springmvc-example
     runtime: java
-    command: "java -Xmx512M -Xms512M -jar jetty-runner.jar --port $VCAP_APP_PORT springmvc-example.jar"
+    command: "bash start.sh"
     framework:
       name: standalone
       info:
@@ -12,5 +12,8 @@ applications:
         description: Standalone Application
         exec: 
     infra: eu-aws
-    mem: 1024M
+    mem: 512M
     instances: 1
+    services:
+      springmvc-example-db:
+        type: postgresql

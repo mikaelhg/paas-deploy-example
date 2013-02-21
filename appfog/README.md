@@ -1,9 +1,13 @@
 # PaaS deployment example: AppFog
 
-1. Create your AppFog application
+1. Create the application
 
-2. Add a PostgreSQL database
+    mvn clean package
 
-3. Configure New Relic
+    af push
 
-4. Deploy, and automate deployment
+    af map springmvc-example appfog.paas.gueck.com
+
+2. Update the application
+
+    mvn clean package && af update --path .
