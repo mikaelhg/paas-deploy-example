@@ -11,3 +11,5 @@
 2. Update the application
 
     mvn clean package && af update --path .
+
+Unfortunately any change to the ``manifest.yml`` file requires destroying and recreating the application.
