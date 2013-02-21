@@ -15,6 +15,7 @@
         <module>heroku</module>
         <module>appengine</module>
         <module>openshift</module>
+        <module>appfog</module>
     </modules>
 
 </project>
