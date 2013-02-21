@@ -13,6 +13,7 @@
 
     <modules>
         <module>heroku</module>
+        <module>appengine</module>
     </modules>
 
 </project>
