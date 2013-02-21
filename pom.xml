@@ -5,15 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <groupId>com.gueck</groupId>
+    <groupId>com.gueck.paas.example</groupId>
     <version>1.0-SNAPSHOT</version>
 
-    <artifactId>paas-deploy-example</artifactId>
-    <name>paas-deploy-example</name>
+    <artifactId>parent</artifactId>
+    <name>parent</name>
 
     <modules>
         <module>heroku</module>
         <module>appengine</module>
+        <module>openshift</module>
     </modules>
 
 </project>
