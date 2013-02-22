@@ -1,0 +1,13 @@
+---
+applications:
+  target/classes:
+    name: springmvc-example
+    framework:
+      name: standalone
+      exec:
+      mem: 512M
+    runtime: java7
+    memory: 512M
+    instances: 1
+    url: springmvc-example.${target-base}
+    command: "bash start.sh"
