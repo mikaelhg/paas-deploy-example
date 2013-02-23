@@ -6,5 +6,6 @@ However, it's on GAE's roadmap, as the first bulletin point, so we'll wait:
 
 https://developers.google.com/appengine/docs/features#Roadmap_Features
 
+As a workaround, we're providing a WEB-INF/web.xml file in this project.
 
     mvn clean package; ~/Downloads/appengine-java-sdk-1.7.5/bin/appcfg.sh update target/classes/
