@@ -19,4 +19,4 @@ java -Xmx512m -Xms512m -XX:+UseCompressedOops \
     -Dspring.profiles.active=postgresql \
     -Ddb.url=${JDBC_URL} \
     -Ddb.user=${PG_USERNAME} -Ddb.password=${PG_PASSWORD} \
-    -jar target/*-war-exec.jar --httpPort ${PORT}
+    -jar springmvc-example.jar --httpPort ${PORT}
