@@ -8,4 +8,9 @@ https://developers.google.com/appengine/docs/features#Roadmap_Features
 
 As a workaround, we're providing a WEB-INF/web.xml file in this project.
 
+http://code.google.com/p/hibernate-gae/issues/detail?id=5
+
+The ``persistence.xml`` and ``hibernate.cfg.xml`` files attempt to work around a GAE classloader bug/feature:
+http://code.google.com/p/googleappengine/issues/detail?id=6593
+
     mvn clean package; ~/Downloads/appengine-java-sdk-1.7.5/bin/appcfg.sh update target/classes/
