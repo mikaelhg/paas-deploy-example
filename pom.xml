@@ -17,6 +17,7 @@
         <module>openshift</module>
         <module>appfog</module>
         <module>cloudfoundry</module>
+        <module>cloudbees</module>
     </modules>
 
 </project>
