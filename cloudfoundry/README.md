@@ -1,14 +1,12 @@
 # PaaS deployment example: Cloud Foundry
 
-1. Create the application
+## 1\. Create the application
 
     mvn clean package
-
     vmc push
-
     # vmc map springmvc-example cloudfoundry.paas.gueck.com
 
-2. Update the application
+## 2\. Update the application
 
     mvn clean package && vmc update --path .
 

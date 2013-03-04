@@ -11,12 +11,10 @@ if [[ ${DATABASE_URL} =~ ${REGEX} ]]; then
     PG_HOST=${BASH_REMATCH[3]}
     PG_DATABASE=${BASH_REMATCH[4]}
     JDBC_URL="jdbc:postgresql://${PG_HOST}/${PG_DATABASE}?username=${PG_USERNAME}&password=${PG_PASSWORD}"
+    DATABASE_SETTINGS="-Dspring.profiles.active=postgresql -Ddb.url=${JDBC_URL} -Ddb.user=${PG_USERNAME} -Ddb.password=${PG_PASSWORD}"
 fi
-
 
 java -Xmx512m -Xms512m -XX:+UseCompressedOops \
     -Djavax.servlet.request.encoding=UTF-8 -Dfile.encoding=UTF-8 \
-    -Dspring.profiles.active=postgresql \
-    -Ddb.url=${JDBC_URL} \
-    -Ddb.user=${PG_USERNAME} -Ddb.password=${PG_PASSWORD} \
+    ${DATABASE_SETTINGS} \
     -jar springmvc-example.jar --httpPort ${PORT}
